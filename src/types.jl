@@ -1,9 +1,9 @@
 using Base: @kwdef
 
 struct RateInfo
-    limit::Union{Int, Missing}
-    remaining::Union{Int, Missing}
-    reset::Union{Int, Missing}
+    limit::Union{Int, Missing, Nothing}
+    remaining::Union{Int, Missing, Nothing}
+    reset::Union{Int, Missing, Nothing}
 end
 
 struct Status
@@ -22,182 +22,182 @@ struct Bounds
 end
 
 struct Components
-    ISO_3166_1_alpha_2::Union{String, Missing}
-    ISO_3166_1_alpha_3::Union{String, Missing}
-    ISO_3166_2::Union{Vector{String}, Missing}
-    _category::Union{String, Missing}
-    _normalized_city::Union{String, Missing}
-    _type::Union{String, Missing}
-    city::Union{String, Missing}
-    city_district::Union{String, Missing}
-    continent::Union{String, Missing}
-    country::Union{String, Missing}
-    country_code::Union{String, Missing}
-    county::Union{String, Missing}
-    hamlet::Union{String, Missing}
-    house_number::Union{String, Missing}
-    municipality::Union{String, Missing}
-    neighbourhood::Union{String, Missing}
-    postcode::Union{String, Missing}
-    region::Union{String, Missing}
-    road::Union{String, Missing}
-    road_type::Union{String, Missing}
-    state::Union{String, Missing}
-    state_code::Union{String, Missing}
-    state_district::Union{String, Missing}
-    suburb::Union{String, Missing}
-    village::Union{String, Missing}
-    town::Union{String, Missing}
+    ISO_3166_1_alpha_2::Union{String, Missing, Nothing}
+    ISO_3166_1_alpha_3::Union{String, Missing, Nothing}
+    ISO_3166_2::Union{Vector{String}, Missing, Nothing}
+    _category::Union{String, Missing, Nothing}
+    _normalized_city::Union{String, Missing, Nothing}
+    _type::Union{String, Missing, Nothing}
+    city::Union{String, Missing, Nothing}
+    city_district::Union{String, Missing, Nothing}
+    continent::Union{String, Missing, Nothing}
+    country::Union{String, Missing, Nothing}
+    country_code::Union{String, Missing, Nothing}
+    county::Union{String, Missing, Nothing}
+    hamlet::Union{String, Missing, Nothing}
+    house_number::Union{String, Missing, Nothing}
+    municipality::Union{String, Missing, Nothing}
+    neighbourhood::Union{String, Missing, Nothing}
+    postcode::Union{String, Missing, Nothing}
+    region::Union{String, Missing, Nothing}
+    road::Union{String, Missing, Nothing}
+    road_type::Union{String, Missing, Nothing}
+    state::Union{String, Missing, Nothing}
+    state_code::Union{String, Missing, Nothing}
+    state_district::Union{String, Missing, Nothing}
+    suburb::Union{String, Missing, Nothing}
+    village::Union{String, Missing, Nothing}
+    town::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsDMS
-    lat::Union{String, Missing}
-    lng::Union{String, Missing}
+    lat::Union{String, Missing, Nothing}
+    lng::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsCurrency
-    alternate_symbols::Union{Vector{String}, Missing}
-    decimal_mark::Union{String, Missing}
-    disambiguate_symbol::Union{String, Missing}
-    format::Union{String, Missing}
-    html_entity::Union{String, Missing}
-    iso_code::Union{String, Missing}
-    iso_numeric::Union{String, Missing}
-    name::Union{String, Missing}
-    smallest_denomination::Union{Int, Missing}
-    subunit::Union{String, Missing}
-    subunit_to_unit::Union{Int, Missing}
-    symbol::Union{String, Missing}
-    symbol_first::Union{Int, Missing}
-    thousands_separator::Union{String, Missing}
+    alternate_symbols::Union{Vector{String}, Missing, Nothing}
+    decimal_mark::Union{String, Missing, Nothing}
+    disambiguate_symbol::Union{String, Missing, Nothing}
+    format::Union{String, Missing, Nothing}
+    html_entity::Union{String, Missing, Nothing}
+    iso_code::Union{String, Missing, Nothing}
+    iso_numeric::Union{String, Missing, Nothing}
+    name::Union{String, Missing, Nothing}
+    smallest_denomination::Union{Int, Missing, Nothing}
+    subunit::Union{String, Missing, Nothing}
+    subunit_to_unit::Union{Int, Missing, Nothing}
+    symbol::Union{String, Missing, Nothing}
+    symbol_first::Union{Int, Missing, Nothing}
+    thousands_separator::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsFIPS
-    county::Union{String, Missing}
-    state::Union{String, Missing}
+    county::Union{String, Missing, Nothing}
+    state::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsMercator
-    x::Union{Float64, Missing}
-    y::Union{Float64, Missing}
+    x::Union{Float64, Missing, Nothing}
+    y::Union{Float64, Missing, Nothing}
 end
 
 struct AnnotationsNUTSLevel
-    code::Union{String, Missing}
+    code::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsNUTS
-    NUTS0::Union{AnnotationsNUTSLevel, Missing}
-    NUTS1::Union{AnnotationsNUTSLevel, Missing}
-    NUTS2::Union{AnnotationsNUTSLevel, Missing}
-    NUTS3::Union{AnnotationsNUTSLevel, Missing}
+    NUTS0::Union{AnnotationsNUTSLevel, Missing, Nothing}
+    NUTS1::Union{AnnotationsNUTSLevel, Missing, Nothing}
+    NUTS2::Union{AnnotationsNUTSLevel, Missing, Nothing}
+    NUTS3::Union{AnnotationsNUTSLevel, Missing, Nothing}
 end
 
 struct AnnotationsOSM
-    edit_url::Union{String, Missing}
-    note_url::Union{String, Missing}
-    url::Union{String, Missing}
+    edit_url::Union{String, Missing, Nothing}
+    note_url::Union{String, Missing, Nothing}
+    url::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsRoadInfo
-    drive_on::Union{String, Missing}
-    road::Union{String, Missing}
-    road_reference::Union{String, Missing}
-    road_reference_intl::Union{String, Missing}
-    road_type::Union{String, Missing}
-    speed_in::Union{String, Missing}
-    lanes::Union{Int, Missing}
-    maxheight::Union{Float64, String, Missing}
-    maxspeed::Union{Int, Missing}
-    maxweight::Union{Float64, Missing}
-    maxwidth::Union{Float64, Missing}
-    oneway::Union{String, Missing}
-    surface::Union{String, Missing}
-    toll::Union{String, Missing}
-    toll_details::Union{Dict{String, Any}, Missing}
-    width::Union{Float64, Missing}
+    drive_on::Union{String, Missing, Nothing}
+    road::Union{String, Missing, Nothing}
+    road_reference::Union{String, Missing, Nothing}
+    road_reference_intl::Union{String, Missing, Nothing}
+    road_type::Union{String, Missing, Nothing}
+    speed_in::Union{String, Missing, Nothing}
+    lanes::Union{Int, Missing, Nothing}
+    maxheight::Union{Float64, String, Missing, Nothing}
+    maxspeed::Union{Int, Missing, Nothing}
+    maxweight::Union{Float64, Missing, Nothing}
+    maxwidth::Union{Float64, Missing, Nothing}
+    oneway::Union{String, Missing, Nothing}
+    surface::Union{String, Missing, Nothing}
+    toll::Union{String, Missing, Nothing}
+    toll_details::Union{Dict{String, Any}, Missing, Nothing}
+    width::Union{Float64, Missing, Nothing}
 end
 
 struct AnnotationsSunTime
-    apparent::Union{Int, Missing}
-    astronomical::Union{Int, Missing}
-    civil::Union{Int, Missing}
-    nautical::Union{Int, Missing}
+    apparent::Union{Int, Missing, Nothing}
+    astronomical::Union{Int, Missing, Nothing}
+    civil::Union{Int, Missing, Nothing}
+    nautical::Union{Int, Missing, Nothing}
 end
 
 struct AnnotationsSun
-    rise::Union{AnnotationsSunTime, Missing}
-    set::Union{AnnotationsSunTime, Missing}
+    rise::Union{AnnotationsSunTime, Missing, Nothing}
+    set::Union{AnnotationsSunTime, Missing, Nothing}
 end
 
 struct AnnotationsTimezone
-    name::Union{String, Missing}
-    now_in_dst::Union{Int, Missing}
-    offset_sec::Union{Int, Missing}
-    offset_string::Union{String, Missing}
-    short_name::Union{String, Missing}
+    name::Union{String, Missing, Nothing}
+    now_in_dst::Union{Int, Missing, Nothing}
+    offset_sec::Union{Int, Missing, Nothing}
+    offset_string::Union{String, Missing, Nothing}
+    short_name::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsUNLOCODEFunction
-    meaning::Union{Vector{String}, Missing}
-    raw::Union{String, Missing}
+    meaning::Union{Vector{String}, Missing, Nothing}
+    raw::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsUNLOCODE
-    code::Union{String, Missing}
-    date::Union{String, Missing}
-    func::Union{AnnotationsUNLOCODEFunction, Missing}
-    lat::Union{Float64, Missing}
-    lng::Union{Float64, Missing}
-    name::Union{String, Missing}
-    name_wo_diacritics::Union{String, Missing}
+    code::Union{String, Missing, Nothing}
+    date::Union{String, Missing, Nothing}
+    func::Union{AnnotationsUNLOCODEFunction, Missing, Nothing}
+    lat::Union{Float64, Missing, Nothing}
+    lng::Union{Float64, Missing, Nothing}
+    name::Union{String, Missing, Nothing}
+    name_wo_diacritics::Union{String, Missing, Nothing}
 end
 
 struct AnnotationsUNM49
-    regions::Union{Dict{String, String}, Missing}
-    statistical_groupings::Union{Vector{String}, Missing}
+    regions::Union{Dict{String, String}, Missing, Nothing}
+    statistical_groupings::Union{Vector{String}, Missing, Nothing}
 end
 
 struct AnnotationsWhat3Words
-    words::Union{String, Missing}
+    words::Union{String, Missing, Nothing}
 end
 
 struct Annotations
-    callingcode::Union{Int, Missing}
-    currency::Union{AnnotationsCurrency, Missing}
-    DMS::Union{AnnotationsDMS, Missing}
-    FIPS::Union{AnnotationsFIPS, Missing}
-    flag::Union{String, Missing}
-    geohash::Union{String, Missing}
-    Maidenhead::Union{String, Missing}
-    Mercator::Union{AnnotationsMercator, Missing}
-    MGRS::Union{String, Missing}
-    NUTS::Union{AnnotationsNUTS, Missing}
-    OSM::Union{AnnotationsOSM, Missing}
-    qibla::Union{Float64, Missing}
-    roadinfo::Union{AnnotationsRoadInfo, Missing}
-    sun::Union{AnnotationsSun, Missing}
-    timezone::Union{AnnotationsTimezone, Missing}
-    UN_M49::Union{AnnotationsUNM49, Missing}
-    UNLOCODE::Union{AnnotationsUNLOCODE, Missing}
-    what3words::Union{AnnotationsWhat3Words, Missing}
-    wikidata::Union{String, Missing}
+    callingcode::Union{Int, Missing, Nothing}
+    currency::Union{AnnotationsCurrency, Missing, Nothing}
+    DMS::Union{AnnotationsDMS, Missing, Nothing}
+    FIPS::Union{AnnotationsFIPS, Missing, Nothing}
+    flag::Union{String, Missing, Nothing}
+    geohash::Union{String, Missing, Nothing}
+    Maidenhead::Union{String, Missing, Nothing}
+    Mercator::Union{AnnotationsMercator, Missing, Nothing}
+    MGRS::Union{String, Missing, Nothing}
+    NUTS::Union{AnnotationsNUTS, Missing, Nothing}
+    OSM::Union{AnnotationsOSM, Missing, Nothing}
+    qibla::Union{Float64, Missing, Nothing}
+    roadinfo::Union{AnnotationsRoadInfo, Missing, Nothing}
+    sun::Union{AnnotationsSun, Missing, Nothing}
+    timezone::Union{AnnotationsTimezone, Missing, Nothing}
+    UN_M49::Union{AnnotationsUNM49, Missing, Nothing}
+    UNLOCODE::Union{AnnotationsUNLOCODE, Missing, Nothing}
+    what3words::Union{AnnotationsWhat3Words, Missing, Nothing}
+    wikidata::Union{String, Missing, Nothing}
 end
 
 struct Result
     annotations::Union{Annotations, Missing, Nothing}
     bounds::Union{Bounds, Missing, Nothing}
     components::Union{Components, Missing, Nothing}
-    confidence::Union{Int, Missing}
+    confidence::Union{Int, Missing, Nothing}
     distance_from_q::Union{Dict{String, Int}, Missing, Nothing}
-    formatted::Union{String, Missing}
-    geometry::Union{Geometry, Missing}
+    formatted::Union{String, Missing, Nothing}
+    geometry::Union{Geometry, Missing, Nothing}
 end
 
 struct Response
     documentation::String
     licenses::Vector{Dict{String, String}}
-    rate::Union{RateInfo, Missing}
+    rate::Union{RateInfo, Missing, Nothing}
     results::Vector{Result}
     status::Status
     stay_informed::Dict{String, String}

@@ -15,6 +15,7 @@ ProgressMeter = "92933f4c-e287-5a05-a399-4b506db050ca"
 Retry = "20febd7b-183b-5ae2-ac4a-720e7ce64774"
 
 [compat]
+julia = "1.11.5"
 CSV = "0.10.15"
 Dates = "1.11.0"
 HTTP = "1.10.16"
